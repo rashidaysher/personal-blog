@@ -1,15 +1,22 @@
+{% extends 'base.html' %}
 {% import 'macros.html' as macro%}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to the best Movie Review website </title>
-        {% endif %}
-    </head>
-    <body>
+<!-- Content block -->
+{%block content%}
+<div class="container" style="padding-bottom: 20px;">
 
-    </body>
-</html>
+</div>
+<div class="container">
+    <h3>
+        Random Blogs
+    </h3>
+    <p>{{postings.quote}}</p>
+    <h3>{{postings.author}}</h3>
+    <a href="{{postings.permalink}}"> <button>Read More</button></a>
+
+
+    <h4>Recent Blogs</h4>
+    <a href="/subscribe/{{current_user.id}}" class="btn btn-success">Subscribe</a>
+    <hr>
+    {{macro.displayPosts(posts)}}
+</div>
+{%endblock%}
