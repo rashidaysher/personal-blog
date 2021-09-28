@@ -2,17 +2,16 @@
 {% import 'macros.html' as macro%}
 <!-- Content block -->
 {%block content%}
-<div class="container" style="padding-bottom: 20px;">
+<div class="container" style="padding-bottom: 20px;background-color: #4E478C;">
 
 </div>
-<div class="container">
+<div class="container" >
     <h3>
         Random Blogs
     </h3>
     <p>{{postings.quote}}</p>
     <h3>{{postings.author}}</h3>
     <a href="{{postings.permalink}}"> <button>Read More</button></a>
-
 
     <h4>Recent Blogs</h4>
     <a href="/subscribe/{{current_user.id}}" class="btn btn-success">Subscribe</a>
